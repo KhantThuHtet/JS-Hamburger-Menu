@@ -1,0 +1,79 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500&family=Roboto:wght@300;400&family=Source+Sans+Pro:wght@300;400&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  --nav-bg: #263137;
+  --bg: #1e1e1e;
+}
+body {
+  font-family: "Roboto", sans-serif;
+  background-color: var(--bg);
+  color: rgb(247, 247, 247);
+}
+.container {
+  margin: 100px auto;
+  width: 86%;
+  height: 40px;
+  position: relative;
+}
+.hamburgerMenu {
+  position: absolute;
+  top: 0;
+  right: 0;
+  cursor: pointer;
+  z-index: 1;
+}
+.hamburger {
+  width: 40px;
+  height: 5px;
+  border-radius: 5px;
+  background-color: #00b4db;
+  margin-bottom: 3px;
+}
+.hideLine {
+  opacity: 0;
+}
+.rotate1 {
+  transform: rotate(45deg) translate(5px, 8px);
+}
+.line1,
+.line2,
+.line3 {
+  transition: 0.5s;
+}
+.rotate3 {
+  transform: rotate(-45deg) translate(3px, -6px);
+}
+.overlay {
+  transition: all 0.5s;
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  background-color: var(--nav-bg);
+  top: 0;
+  left: 0;
+  opacity: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.menuList {
+  transition: transform 1s;
+}
+.uptoTop {
+  transform: translateY(-10px);
+}
+.item {
+  margin-bottom: 10px;
+  font-size: 20px;
+  cursor: pointer;
+}
+.item:hover {
+  opacity: 0.8;
+}
+.showOverlayMenu {
+  opacity: 1;
+}
